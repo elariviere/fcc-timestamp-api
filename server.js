@@ -8,7 +8,6 @@ app.get('/:date', function (req, res) {
     console.log(date);
     res.status(200).json({unix:date.getTime() / 1000, 
       natural: date.toLocaleDateString('en-US', {month:'long', day:'numeric', year:'numeric'})})
-      //natural: date.getMonth() + " " + date.getDate() + ", " + date.getFullYear() })
   } else {
     res.status(400).json({unix:null, natural:null});
   }
